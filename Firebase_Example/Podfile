@@ -7,5 +7,7 @@ target 'Firebase_Example' do
 
   # Pods for Firebase_Example
 	pod 'Firebase/Core'
+	pod ‘Firebase/Database’
+	pod ‘Firebase/Auth’
 
 end
