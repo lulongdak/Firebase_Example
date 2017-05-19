@@ -11,5 +11,5 @@ Example for Google Firebase
   $pod install
 - Waiting when installing is completed then close Terminal
 
-#Open project
+#Open project:
 Open the .xcworkspace file to see the project in Xcode
