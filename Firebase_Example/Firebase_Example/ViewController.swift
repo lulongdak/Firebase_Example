@@ -39,12 +39,14 @@ class ViewController: UIViewController {
             if error == nil
             {
                 
-                let alertController = UIAlertController(title: "Success", message: "Account created!", preferredStyle: .alert)
+                /*let alertController = UIAlertController(title: "Success", message: "Account created!", preferredStyle: .alert)
                 
                 let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(defaultAction)
                 
-                self.present(alertController, animated: true, completion: nil)
+                self.present(alertController, animated: true, completion: nil)*/
+                self.performSegue(withIdentifier: "loginSuccess", sender: nil)
+                
             }
             else {
                 
@@ -57,6 +59,7 @@ class ViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
         }
+        
 
     }
 
