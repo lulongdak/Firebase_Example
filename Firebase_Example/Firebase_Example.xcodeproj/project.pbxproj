@@ -25,9 +25,9 @@
 		ABB0FCA9477F1A8983CE9500 /* Pods-Firebase_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Firebase_Example/Pods-Firebase_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FE7390F61ECDFD9900653390 /* Firebase_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firebase_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7390F91ECDFD9900653390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE7390FB1ECDFD9900653390 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		FE7390FB1ECDFD9900653390 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE7390FE1ECDFD9A00653390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE7391001ECDFD9B00653390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		FE7391001ECDFD9B00653390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE7391031ECDFD9B00653390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE7391051ECDFD9B00653390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE73910B1ECE001800653390 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -83,60 +83,17 @@
 		FE7390F81ECDFD9900653390 /* Firebase_Example */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				FEFFD9111ECF398400B9967C /* Controller */,
-				FEFFD9121ECF398400B9967C /* Helper */,
-				FEFFD9131ECF398400B9967C /* Model */,
-				FEFFD9141ECF398400B9967C /* Resources */,
-				FEFFD9151ECF398400B9967C /* View */,
-=======
 				9FEA11B41ED0917000991033 /* Firebase_Example.entitlements */,
->>>>>>> origin/Authentication-Branch
 				FE7390F91ECDFD9900653390 /* AppDelegate.swift */,
+				FE7390FB1ECDFD9900653390 /* ViewController.swift */,
+				FE7390FD1ECDFD9A00653390 /* Main.storyboard */,
+				FE7391001ECDFD9B00653390 /* Assets.xcassets */,
+				FE7391021ECDFD9B00653390 /* LaunchScreen.storyboard */,
 				FE7391051ECDFD9B00653390 /* Info.plist */,
 				FE73910B1ECE001800653390 /* GoogleService-Info.plist */,
 				9FEA11B01ED081E000991033 /* SignInViewController.swift */,
 			);
 			path = Firebase_Example;
-			sourceTree = "<group>";
-		};
-		FEFFD9111ECF398400B9967C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FE7390FB1ECDFD9900653390 /* ViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		FEFFD9121ECF398400B9967C /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		FEFFD9131ECF398400B9967C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		FEFFD9141ECF398400B9967C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				FE7391001ECDFD9B00653390 /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		FEFFD9151ECF398400B9967C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FE7390FD1ECDFD9A00653390 /* Main.storyboard */,
-				FE7391021ECDFD9B00653390 /* LaunchScreen.storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +241,6 @@
 				FE7390FE1ECDFD9A00653390 /* Base */,
 			);
 			name = Main.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		FE7391021ECDFD9B00653390 /* LaunchScreen.storyboard */ = {
@@ -293,7 +249,6 @@
 				FE7391031ECDFD9B00653390 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
