@@ -15,6 +15,9 @@
 		FE7391041ECDFD9B00653390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7391021ECDFD9B00653390 /* LaunchScreen.storyboard */; };
 		FE73910C1ECE001800653390 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE73910B1ECE001800653390 /* GoogleService-Info.plist */; };
 		FEA6F51F1ED0BDBE0096B58F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6F51E1ED0BDBE0096B58F /* MainViewController.swift */; };
+		FEDF40701ED1B336000DC2ED /* Storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDF406F1ED1B336000DC2ED /* Storage.storyboard */; };
+		FEDF40741ED1D931000DC2ED /* myava.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEDF40731ED1D931000DC2ED /* myava.jpg */; };
+		FEDF40761ED1DC43000DC2ED /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDF40751ED1DC43000DC2ED /* StorageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		FE7391051ECDFD9B00653390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE73910B1ECE001800653390 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEA6F51E1ED0BDBE0096B58F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FEDF406F1ED1B336000DC2ED /* Storage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storage.storyboard; sourceTree = "<group>"; };
+		FEDF40731ED1D931000DC2ED /* myava.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = myava.jpg; sourceTree = "<group>"; };
+		FEDF40751ED1DC43000DC2ED /* StorageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 			children = (
 				FE7390FB1ECDFD9900653390 /* ViewController.swift */,
 				FEA6F51E1ED0BDBE0096B58F /* MainViewController.swift */,
+				FEDF40751ED1DC43000DC2ED /* StorageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 		FEA6F51C1ED0B7ED0096B58F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FEDF40731ED1D931000DC2ED /* myava.jpg */,
 				FE7391001ECDFD9B00653390 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -132,6 +140,7 @@
 			children = (
 				FE7390FD1ECDFD9A00653390 /* Main.storyboard */,
 				FE7391021ECDFD9B00653390 /* LaunchScreen.storyboard */,
+				FEDF406F1ED1B336000DC2ED /* Storage.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +214,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE7391041ECDFD9B00653390 /* LaunchScreen.storyboard in Resources */,
+				FEDF40701ED1B336000DC2ED /* Storage.storyboard in Resources */,
+				FEDF40741ED1D931000DC2ED /* myava.jpg in Resources */,
 				FE73910C1ECE001800653390 /* GoogleService-Info.plist in Resources */,
 				FE7391011ECDFD9B00653390 /* Assets.xcassets in Resources */,
 				FE7390FF1ECDFD9A00653390 /* Main.storyboard in Resources */,
@@ -268,6 +279,7 @@
 			files = (
 				FEA6F51F1ED0BDBE0096B58F /* MainViewController.swift in Sources */,
 				FE7390FC1ECDFD9900653390 /* ViewController.swift in Sources */,
+				FEDF40761ED1DC43000DC2ED /* StorageViewController.swift in Sources */,
 				FE7390FA1ECDFD9900653390 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

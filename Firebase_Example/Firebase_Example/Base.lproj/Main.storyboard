@@ -90,23 +90,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tn5-Mw-gUX">
-                                <rect key="frame" x="105.5" y="230" width="109" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsk-06-aOm">
+                                <rect key="frame" x="125.5" y="55" width="70" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="User Info"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucQ-rD-QDG">
+                                <rect key="frame" x="129.5" y="103" width="61" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Storage"/>
+                                <connections>
+                                    <action selector="ViewStorage:" destination="QnS-Qa-RIg" eventType="touchUpInside" id="Ldf-to-Ay9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yc6-Vt-dFL">
+                                <rect key="frame" x="89.5" y="151" width="141" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Manage Customer"/>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rlL-YP-VhD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="MENU" id="LAj-ol-TES"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tn5-Mw-gUX" firstAttribute="centerY" secondItem="MEs-Aa-bOM" secondAttribute="centerY" id="VpF-9k-YuV"/>
-                            <constraint firstItem="Tn5-Mw-gUX" firstAttribute="centerX" secondItem="MEs-Aa-bOM" secondAttribute="centerX" id="j5U-mY-SPq"/>
+                            <constraint firstItem="Yc6-Vt-dFL" firstAttribute="centerX" secondItem="MEs-Aa-bOM" secondAttribute="centerX" id="4dN-ws-Kfu"/>
+                            <constraint firstItem="ucQ-rD-QDG" firstAttribute="centerX" secondItem="MEs-Aa-bOM" secondAttribute="centerX" id="Edo-b3-Uhd"/>
+                            <constraint firstItem="Yc6-Vt-dFL" firstAttribute="top" secondItem="ucQ-rD-QDG" secondAttribute="bottom" constant="15" id="UEn-wM-u4X"/>
+                            <constraint firstItem="ucQ-rD-QDG" firstAttribute="top" secondItem="wsk-06-aOm" secondAttribute="bottom" constant="15" id="iG2-fx-zXj"/>
+                            <constraint firstItem="wsk-06-aOm" firstAttribute="top" secondItem="UA7-Qm-xED" secondAttribute="bottom" constant="35" id="iMT-xg-A7h"/>
+                            <constraint firstItem="wsk-06-aOm" firstAttribute="centerX" secondItem="MEs-Aa-bOM" secondAttribute="centerX" id="m2E-Hx-SaI"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Omk-t7-UO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="100"/>
+            <point key="canvasLocation" x="841.875" y="100"/>
         </scene>
     </scenes>
 </document>

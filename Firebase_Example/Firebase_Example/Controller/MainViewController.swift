@@ -7,20 +7,33 @@
 //
 
 import UIKit
+import Firebase
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var idLabel: UILabel!
+    var id:String? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        print("\(Auth.auth().currentUser!.uid)")
+        
+        
     }
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func ViewStorage(_ sender: Any) {
+        let storyboar = UIStoryboard(name: "Storage", bundle: Bundle.main)
+        let controller = storyboar.instantiateViewController(withIdentifier: "Storageboar") as! StorageViewController
+        self.present(controller, animated: true, completion: nil)
+        
+    }
 
     /*
     // MARK: - Navigation

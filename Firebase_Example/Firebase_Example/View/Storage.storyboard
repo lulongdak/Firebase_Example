@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Storage View Controller-->
+        <scene sceneID="Ljm-UD-IXj">
+            <objects>
+                <viewController storyboardIdentifier="Storageboar" id="YmK-S4-g3z" customClass="StorageViewController" customModule="Firebase_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qdc-Ia-DWC"/>
+                        <viewControllerLayoutGuide type="bottom" id="9VB-MT-8L6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wcN-KO-SaH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSd-bE-LLN">
+                                <rect key="frame" x="119" y="50" width="82" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Upload file"/>
+                                <connections>
+                                    <action selector="Upload_file:" destination="YmK-S4-g3z" eventType="touchUpInside" id="7Rs-JV-qz3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9Q-BA-FQo">
+                                <rect key="frame" x="108" y="98" width="104" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Download file"/>
+                                <connections>
+                                    <action selector="Download_file:" destination="YmK-S4-g3z" eventType="touchUpInside" id="ZaL-Mb-Tw0"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aY-Ck-0M4">
+                                <rect key="frame" x="259.5" y="213" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="Delete_Action:" destination="YmK-S4-g3z" eventType="touchUpInside" id="V0x-iW-kJA"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTj-c8-jzU">
+                                <rect key="frame" x="0.0" y="161" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yjg-nh-VVQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="STORAGE" id="dxg-sp-32w"/>
+                                </items>
+                            </navigationBar>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1wX-vl-FiZ">
+                                <rect key="frame" x="0.0" y="248" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="9p7-bp-z5j"/>
+                                    <constraint firstAttribute="height" constant="320" id="cIQ-MW-TRT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OTj-c8-jzU" firstAttribute="leading" secondItem="wcN-KO-SaH" secondAttribute="leading" id="6bf-1a-os8"/>
+                            <constraint firstItem="vSd-bE-LLN" firstAttribute="top" secondItem="qdc-Ia-DWC" secondAttribute="bottom" constant="30" id="7MA-Re-e6N"/>
+                            <constraint firstAttribute="trailing" secondItem="2aY-Ck-0M4" secondAttribute="trailing" constant="15" id="9ve-4I-T8G"/>
+                            <constraint firstItem="e9Q-BA-FQo" firstAttribute="centerX" secondItem="wcN-KO-SaH" secondAttribute="centerX" id="CiL-gp-AlE"/>
+                            <constraint firstItem="9VB-MT-8L6" firstAttribute="top" secondItem="1wX-vl-FiZ" secondAttribute="bottom" id="EgA-V6-ysx"/>
+                            <constraint firstItem="1wX-vl-FiZ" firstAttribute="centerX" secondItem="wcN-KO-SaH" secondAttribute="centerX" id="Es2-d2-LXM"/>
+                            <constraint firstItem="OTj-c8-jzU" firstAttribute="top" secondItem="e9Q-BA-FQo" secondAttribute="bottom" constant="30" id="G9R-s8-t8v"/>
+                            <constraint firstItem="e9Q-BA-FQo" firstAttribute="top" secondItem="vSd-bE-LLN" secondAttribute="bottom" constant="15" id="Orz-Hr-Jud"/>
+                            <constraint firstItem="1wX-vl-FiZ" firstAttribute="top" secondItem="2aY-Ck-0M4" secondAttribute="bottom" constant="5" id="SRS-yf-guX"/>
+                            <constraint firstItem="vSd-bE-LLN" firstAttribute="centerX" secondItem="wcN-KO-SaH" secondAttribute="centerX" id="e12-yL-061"/>
+                            <constraint firstItem="OTj-c8-jzU" firstAttribute="centerX" secondItem="wcN-KO-SaH" secondAttribute="centerX" id="vA7-oa-EbJ"/>
+                            <constraint firstAttribute="trailing" secondItem="OTj-c8-jzU" secondAttribute="trailing" id="ykZ-lK-Duc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="delBtn" destination="2aY-Ck-0M4" id="A20-r3-zsx"/>
+                        <outlet property="imgUI" destination="1wX-vl-FiZ" id="c6n-RZ-Lqf"/>
+                        <outlet property="statelbl" destination="OTj-c8-jzU" id="2gd-OB-4DK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxM-CH-6JO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.25" y="86.619718309859152"/>
+        </scene>
+    </scenes>
+</document>

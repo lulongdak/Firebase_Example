@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txfEmail: UITextField!
     @IBOutlet weak var txfPassword: UITextField!
     @IBOutlet weak var btnSignUp: UIButton!
+    var isSignin = false
   
     @IBOutlet weak var btnLog: UIButton!
     override func viewDidLoad() {
@@ -46,6 +47,7 @@ class ViewController: UIViewController {
                 
                 self.present(alertController, animated: true, completion: nil)*/
                 self.performSegue(withIdentifier: "loginSuccess", sender: nil)
+            
                 
             }
             else {
@@ -113,4 +115,13 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         
     }
+    
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loginSuccess" {
+            if let destinationVC = segue.destination as? MainViewController{
+                //destinationVC.id = Auth.auth().currentUser?.uid
+                
+            }
+        }
+    }*/
 }
