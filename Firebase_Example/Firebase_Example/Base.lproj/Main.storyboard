@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -52,11 +52,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Da-Al-Ep1">
-                                <rect key="frame" x="69" y="316" width="170" height="30"/>
+                                <rect key="frame" x="69" y="312" width="170" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
-                                <state key="normal" title="Log In">
+                                <state key="normal" title="Sign In">
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -138,7 +138,7 @@
                                 <rect key="frame" x="0.0" y="5" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="MENU" id="LAj-ol-TES">
-                                        <barButtonItem key="rightBarButtonItem" title="Log out" id="YCK-hr-rax">
+                                        <barButtonItem key="rightBarButtonItem" title="Sign out" id="YCK-hr-rax">
                                             <connections>
                                                 <action selector="LogOut:" destination="QnS-Qa-RIg" id="LSg-IJ-Nyp"/>
                                             </connections>
@@ -146,16 +146,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTH-eU-yJl">
-                                <rect key="frame" x="113" y="192" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Sign Out"/>
-                                <connections>
-                                    <action selector="btnSignOutPressed:" destination="QnS-Qa-RIg" eventType="touchUpInside" id="E1p-KW-dAn"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="logOutSuccess" id="2yt-Wy-XhO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -170,9 +160,6 @@
                             <constraint firstItem="rlL-YP-VhD" firstAttribute="leading" secondItem="MEs-Aa-bOM" secondAttribute="leading" id="xd9-Zl-15j"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="btnSignOut" destination="nTH-eU-yJl" id="fhH-gQ-QE9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Omk-t7-UO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
