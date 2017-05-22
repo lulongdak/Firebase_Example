@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var idLabel: UILabel!
     var id:String? = nil
     
+    @IBOutlet weak var btnSignOut: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,6 +55,20 @@ class MainViewController: UIViewController {
 
     }
 
+    
+    @IBAction func btnSignOutPressed(_ sender: Any) {
+        if Auth.auth().currentUser != nil
+        {
+            do
+            {
+                try Auth.auth().signOut()
+                self.performSegue(withIdentifier: "logOutSuccess", sender: nil)
+            }
+            catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,7 +43,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwb-y5-CQs">
-                                <rect key="frame" x="69" y="374" width="170" height="30"/>
+                                <rect key="frame" x="69" y="403" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="or Sign Up"/>
@@ -63,10 +63,33 @@
                                     <action selector="btnLogInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6N1-GZ-Jh3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyc-8G-MfA">
+                                <rect key="frame" x="69" y="365" width="170" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <state key="normal" title="Sign In With Facebook">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFBPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Cm-zq-fg2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pm7-ac-yAJ">
+                                <rect key="frame" x="69" y="441" width="170" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Forgot Password ?"/>
+                                <connections>
+                                    <action selector="btnForgotPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQf-Cz-ni2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="btnFB" destination="gyc-8G-MfA" id="SJg-c5-6jm"/>
+                        <outlet property="btnForgot" destination="pm7-ac-yAJ" id="wRd-zQ-bYK"/>
                         <outlet property="btnLog" destination="3Da-Al-Ep1" id="MAT-Sa-id4"/>
                         <outlet property="btnSignUp" destination="gwb-y5-CQs" id="83N-Mk-8ss"/>
                         <outlet property="txfEmail" destination="eG3-1l-MW8" id="LQa-kS-tnk"/>
@@ -123,6 +146,16 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTH-eU-yJl">
+                                <rect key="frame" x="113" y="192" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="btnSignOutPressed:" destination="QnS-Qa-RIg" eventType="touchUpInside" id="E1p-KW-dAn"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="logOutSuccess" id="2yt-Wy-XhO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -137,6 +170,9 @@
                             <constraint firstItem="rlL-YP-VhD" firstAttribute="leading" secondItem="MEs-Aa-bOM" secondAttribute="leading" id="xd9-Zl-15j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnSignOut" destination="nTH-eU-yJl" id="fhH-gQ-QE9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Omk-t7-UO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
