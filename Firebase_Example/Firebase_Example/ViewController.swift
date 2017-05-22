@@ -46,16 +46,36 @@ class ViewController: UIViewController {
         Auth.auth().signIn(withEmail: txfEmail.text!,password: txfPassword.text!) { user, error in
             if error == nil
             {
-                
-                /*let alertController = UIAlertController(title: "Success", message: "Account created!", preferredStyle: .alert)
-                
-                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(defaultAction)
-                
-                self.present(alertController, animated: true, completion: nil)*/
-                self.performSegue(withIdentifier: "loginSuccess", sender: nil)
-            
-                
+                if (Auth.auth().currentUser?.isEmailVerified)!
+                {
+                    self.performSegue(withIdentifier: "loginSuccess", sender: nil)
+                }
+                else
+                {
+                    let alertController = UIAlertController(title: "Error", message: "Account not verified!", preferredStyle: .alert)
+                    
+                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                    let verifyAction = UIAlertAction(title: "Verify", style: .default) { action in
+                        
+                        Auth.auth().currentUser?.sendEmailVerification { (error) in
+                            if error != nil{
+                                print(error!.localizedDescription)
+                            }
+                            else
+                            {
+                                let sentAlertController = UIAlertController(title: "", message: "A verification email has been sent to your email!", preferredStyle: .alert)
+                                let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                                sentAlertController.addAction(okAction)
+                                self.present(sentAlertController, animated: true, completion: nil)
+                            }
+                        }
+
+                    }
+                    alertController.addAction(verifyAction)
+                    alertController.addAction(cancelAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
             else {
                 
@@ -86,13 +106,20 @@ class ViewController: UIViewController {
             Auth.auth().createUser(withEmail: emailField.text!,password: passwordField.text!) { user, error in
                 if error == nil {
                     
-                    let alertController = UIAlertController(title: "Success", message: "Account created!", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "Success", message: "Account created! A verification email has been sent to your email. Please verify.", preferredStyle: .alert)
                     
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(defaultAction)
                     
                     self.present(alertController, animated: true, completion: nil)
                     Auth.auth().signIn(withEmail: self.txfEmail.text!,password: self.txfPassword.text!)
+                    
+                    Auth.auth().currentUser?.sendEmailVerification { (error) in
+                        if error != nil{
+                            print(error!.localizedDescription)
+                        }
+                    }
+                    
                     
                     
                 
