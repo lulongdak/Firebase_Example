@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
 
@@ -16,13 +17,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var txfPassword: UITextField!
     @IBOutlet weak var btnSignUp: UIButton!
     var isSignin = false
+    @IBOutlet weak var btnForgot: UIButton!
   
+    @IBOutlet weak var btnFB: UIButton!
     @IBOutlet weak var btnLog: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         btnLog.layer.borderWidth = 1
         btnLog.layer.borderColor = UIColor.black.cgColor
         btnLog.layer.cornerRadius = 5
+        
+        btnFB.layer.borderWidth = 1
+        btnFB.layer.borderColor = UIColor.black.cgColor
+        btnFB.layer.cornerRadius = 5
         // Do any additional setup after loading the view, typically from a nib.
         
         }
@@ -115,6 +122,83 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         
     }
+    
+    
+    @IBAction func btnFBPressed(_ sender: Any) {
+        let fbLoginManager = FBSDKLoginManager()
+        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
+            if let error = error {
+                print("Failed to login: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let accessToken = FBSDKAccessToken.current() else {
+                print("Failed to get access token")
+                return
+            }
+            
+            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+            
+            // Perform login by calling Firebase APIs
+            Auth.auth().signIn(with: credential, completion: { (user, error) in
+                if let error = error {
+                    print("Login error: \(error.localizedDescription)")
+                    let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(okayAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                    return
+                }
+                
+                // Present the main view
+                self.performSegue(withIdentifier: "loginSuccess", sender: nil)
+            })
+            
+        }
+    }
+    
+    @IBAction func btnForgotPressed(_ sender: Any) {
+        
+        //create register message
+        let alert = UIAlertController(title: "Reset Password", message: "", preferredStyle: .alert)
+        
+        //create save button and action
+        let resetAction = UIAlertAction(title: "Send", style: .default) { action in
+            //get text from message
+            let emailField = alert.textFields![0]
+            
+            Auth.auth().sendPasswordReset(withEmail: emailField.text!, completion: { (error) in
+                if error == nil
+                {
+                    print("Email sent")
+                }
+            })
+        }
+    
+    
+        
+        
+        //create cancel button and action
+        let cancelAction = UIAlertAction(title: "Cancel",style: .default)
+        
+        //add text to message
+        alert.addTextField { textEmail in
+            textEmail.placeholder = "Enter your email"
+        }
+        
+    
+        
+        //add action to message
+        alert.addAction(resetAction)
+        alert.addAction(cancelAction)
+        
+        //show
+        present(alert, animated: true, completion: nil)
+
+        
+    }
+    
     
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginSuccess" {

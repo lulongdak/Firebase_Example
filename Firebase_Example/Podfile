@@ -11,4 +11,10 @@ target 'Firebase_Example' do
 	pod ‘Firebase/Auth’
 	pod ‘KeychainSwift’
 	pod 'Firebase/Storage'
+    
+    # Pods for Facebook
+    pod 'Bolts'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKLoginKit'
+    
 end
