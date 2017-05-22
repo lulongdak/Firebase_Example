@@ -29,15 +29,15 @@ class StorageViewController: UIViewController {
     }
     
     @IBAction func Upload_file(_ sender: Any) {
-        let path = Auth.auth().currentUser!.uid + "/myava.jpg"
-        let storageRef = Storage.storage().reference(withPath: path )
-        let img = UIImage(named: "myava.jpg")
-        let metadata = StorageMetadata()
-        metadata.contentType="image/jpeg"
-        storageRef.putData(UIImageJPEGRepresentation(img!, 1.0)!, metadata: metadata) { (data,error) in
-            if error == nil {
+        let path = Auth.auth().currentUser!.uid + "/myava.jpg"          //path save file in Storage, name folder is your ID user
+        let storageRef = Storage.storage().reference(withPath: path )   // Create reference with path
+        let img = UIImage(named: "myava.jpg")                           //Image myava.jpg
+        let metadata = StorageMetadata()                                //Create metadata of Storage file
+        metadata.contentType="image/jpeg"                               //Content type
+        storageRef.putData(UIImageJPEGRepresentation(img!, 1.0)!, metadata: metadata) { (data,error) in //Upload file
+            if error == nil {                       // if uploading not error, file is upload successfully
                 print("Upload success!")
-                self.ArletNotice(title: "Upload", message: "Upload Success")
+                self.ArletNotice(title: "Upload", message: "Upload Success")        //notice "Upload success"
                 
             }
             else{
@@ -54,20 +54,21 @@ class StorageViewController: UIViewController {
     
     @IBAction func Download_file(_ sender: Any) {
        
-        let path = Auth.auth().currentUser!.uid + "/myava.jpg"
-        let storageRef = Storage.storage().reference(withPath: path )
-        storageRef.getData(maxSize: INT64_MAX){ (data,error) in
-            if error == nil {
+        let path = Auth.auth().currentUser!.uid + "/myava.jpg"          //path save file in Storage
+        let storageRef = Storage.storage().reference(withPath: path )   //Create reference with path
+        storageRef.getData(maxSize: INT64_MAX){ (data,error) in         //Get data file
+            if error == nil {                                           //Download success
                 print("Download success")
-                self.imgUI.image = UIImage(data: data!)
+                self.imgUI.image = UIImage(data: data!)                 //Show image downloaded
                 self.imgUI.isHidden=false
                 self.delBtn.isHidden = false;
                 self.ArletNotice(title: "Download", message: "Download Success")
               
                 
             }
-            else {
+            else {                              // if error will not show anymore
                 self.imgUI.isHidden=true
+                self.delBtn.isHidden=true
                 print(error?.localizedDescription ?? "Error")
                 print("Download failed")
                 self.ArletNotice(title: "Download", message: "Download Failed")
@@ -83,15 +84,18 @@ class StorageViewController: UIViewController {
    
     @IBAction func Delete_Action(_ sender: Any) {
         
-        let path = Auth.auth().currentUser!.uid + "/myava.jpg"
-        let storageRef = Storage.storage().reference(withPath: path )
-        storageRef.delete(completion: { (error) in
-            if error == nil {
-                self.ArletNotice(title: "Delete", message: "Delete Success")
+        let path = Auth.auth().currentUser!.uid + "/myava.jpg"          //path file to delete
+        let storageRef = Storage.storage().reference(withPath: path )   //Create reference
+        storageRef.delete(completion: { (error) in                      //Delete
+            if error == nil {                                           //Delete success
+                self.ArletNotice(title: "Delete", message: "Delete Success")        //notice delete success
                 print("Delete success")
+                self.imgUI.isHidden=true                               //hidden image and
+                self.delBtn.isHidden=true                               //button
+                
             }
             else {
-                print("Delete failed")
+                print("Delete failed")                          //delete failed
                 self.ArletNotice(title: "Delete", message: "Delete Failed")
             }
         })
@@ -121,7 +125,6 @@ class StorageViewController: UIViewController {
 
     func ArletNotice(title: String, message: String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(defaultAction)
         present(alertController, animated: true, completion: nil)

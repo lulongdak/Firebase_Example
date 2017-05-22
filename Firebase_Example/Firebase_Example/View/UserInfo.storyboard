@@ -105,16 +105,6 @@
                                     <action selector="Update_Action:" destination="6Kp-8s-zuV" eventType="touchUpInside" id="Q5H-24-IgT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTu-6e-CJH">
-                                <rect key="frame" x="87" y="319" width="147" height="33"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Change password">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Changepass_Action:" destination="6Kp-8s-zuV" eventType="touchUpInside" id="2oD-6n-ePa"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -127,9 +117,7 @@
                             <constraint firstItem="j36-HD-88W" firstAttribute="leading" secondItem="YqB-bs-6J8" secondAttribute="leading" constant="20" id="EEH-To-NhF"/>
                             <constraint firstItem="j4G-iL-FLJ" firstAttribute="top" secondItem="j36-HD-88W" secondAttribute="bottom" constant="16" id="EMQ-L6-29b"/>
                             <constraint firstAttribute="trailing" secondItem="Sgb-4B-xof" secondAttribute="trailing" constant="20" id="Hif-OI-Zbd"/>
-                            <constraint firstItem="xTu-6e-CJH" firstAttribute="centerX" secondItem="YqB-bs-6J8" secondAttribute="centerX" id="KEv-HS-yTX"/>
                             <constraint firstItem="j4G-iL-FLJ" firstAttribute="leading" secondItem="YqB-bs-6J8" secondAttribute="leading" constant="20" id="KTg-HM-ohx"/>
-                            <constraint firstItem="xTu-6e-CJH" firstAttribute="top" secondItem="5WJ-oU-RRe" secondAttribute="bottom" constant="15" id="QAb-vu-Tfr"/>
                             <constraint firstAttribute="trailing" secondItem="AUc-Qt-R7E" secondAttribute="trailing" constant="20" id="SY8-g2-YTj"/>
                             <constraint firstItem="j36-HD-88W" firstAttribute="top" secondItem="z6l-AX-AAc" secondAttribute="bottom" constant="45" id="SiQ-Bu-gsD"/>
                             <constraint firstItem="Sgb-4B-xof" firstAttribute="leading" secondItem="ubR-cH-Az2" secondAttribute="trailing" constant="25" id="TZn-xc-hGx"/>

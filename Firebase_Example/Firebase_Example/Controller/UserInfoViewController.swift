@@ -16,7 +16,7 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var textemail: UITextField!
     @IBOutlet weak var textphone: UITextField!
     let user = UserInfo()
-    let rootRef = Database.database().reference()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.setInfor(name: "Lu Long", email: (Auth.auth().currentUser?.email!)!, phone: "01644004614")
@@ -24,12 +24,12 @@ class UserInfoViewController: UIViewController {
       //  let barbtn: UIBarButtonItem = UIBarButtonItem()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    let rootRef = Database.database().reference()
    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let condition = rootRef.child("user_info").child(Auth.auth().currentUser!.uid)
