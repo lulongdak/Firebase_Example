@@ -84,8 +84,19 @@
                                     <action selector="btnForgotPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQf-Cz-ni2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N24-ap-pLU">
+                                <rect key="frame" x="5" y="40" width="41" height="30"/>
+                                <state key="normal" title="Crash"/>
+                                <connections>
+                                    <action selector="crashBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDT-EM-ekm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="N24-ap-pLU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="9ZR-7a-BpK"/>
+                            <constraint firstItem="N24-ap-pLU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Vbc-A0-A5e"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="btnFB" destination="gyc-8G-MfA" id="SJg-c5-6jm"/>
