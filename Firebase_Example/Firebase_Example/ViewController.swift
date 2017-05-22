@@ -21,6 +21,9 @@ class ViewController: UIViewController {
   
     @IBOutlet weak var btnFB: UIButton!
     @IBOutlet weak var btnLog: UIButton!
+    @IBAction func crashBtnPressed(_ sender: Any) {
+        fatalError()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         btnLog.layer.borderWidth = 1

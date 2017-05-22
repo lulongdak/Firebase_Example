@@ -167,6 +167,7 @@
 				FE7390F41ECDFD9800653390 /* Resources */,
 				E3A710694E708E786AF19FB4 /* [CP] Embed Pods Frameworks */,
 				A65BD46AB4801EE3FE1F132E /* [CP] Copy Pods Resources */,
+				D73730D81ED2F1DC00F32340 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -264,6 +265,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Firebase_Example/Pods-Firebase_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D73730D81ED2F1DC00F32340 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:121058541218:ios:55b94ed94fc4b4c6\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"${PROJECT_DIR}/Keys/myexample-c5acc-firebase-crashreporting-2dvy8-0142f86f3e.json\"";
 		};
 		E3A710694E708E786AF19FB4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
