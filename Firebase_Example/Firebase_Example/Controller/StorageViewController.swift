@@ -37,12 +37,9 @@ class StorageViewController: UIViewController {
         metadata.contentType="image/jpeg"
         storageRef.putData(UIImageJPEGRepresentation(img!, 1.0)!, metadata: metadata) { (data,error) in
             if error == nil {
-               
                 self.statelbl.text = "Upload Success"
                 self.statelbl.isHidden=false
                 print("Upload success!")
-             
-                
                 
             }
             else{
@@ -108,6 +105,10 @@ class StorageViewController: UIViewController {
 
     }
     
+    @IBAction func BacktoMenu(_ sender: Any) {
+        self.LoadMainMenu()
+    }
+    
     @IBAction func Pause_Action(_ sender: Any) {
     }
     
@@ -117,46 +118,14 @@ class StorageViewController: UIViewController {
     @IBAction func Cancel_Action(_ sender: Any) {
     }
     
-    func Hiddentlbl(){
-        statelbl.isHidden = true
-    }
-    
-    
-    func start()
+    func LoadMainMenu()
     {
-        if (stateData == 1)
-        {
-            self.statelbl.text = "Uploading...."
-        }
-        else
-        {
-            self.statelbl.text = "Downloading...."
-        }
-    }
-    func complete()
-    {
-        if (stateData == 1)
-        {
-            self.statelbl.text = "Upload success"
-        }
-        else
-        {
-            self.statelbl.text = "Download success"
-        }
+        let storyboar = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let controller = storyboar.instantiateViewController(withIdentifier: "MenuAccount") as! MainViewController
+        self.present(controller, animated: true, completion: nil)
         
     }
-    
-    func errorM(){
-        if (stateData == 1)
-        {
-            self.statelbl.text = "Upload failed"
-        }
-        else
-        {
-            self.statelbl.text = "Download failed"
-        }
-        
-    }
+
 
     /*
     // MARK: - Navigation

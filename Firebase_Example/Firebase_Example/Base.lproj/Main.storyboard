@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Firebase_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Loginboar" id="BYZ-38-t0r" customClass="ViewController" customModule="Firebase_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -81,7 +81,7 @@
         <!--Main View Controller-->
         <scene sceneID="8t7-sn-4aT">
             <objects>
-                <viewController id="QnS-Qa-RIg" customClass="MainViewController" customModule="Firebase_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuAccount" id="QnS-Qa-RIg" customClass="MainViewController" customModule="Firebase_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UA7-Qm-xED"/>
                         <viewControllerLayoutGuide type="bottom" id="fFN-qo-uq2"/>
@@ -94,6 +94,9 @@
                                 <rect key="frame" x="125.5" y="55" width="70" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="User Info"/>
+                                <connections>
+                                    <action selector="View_UserInfo:" destination="QnS-Qa-RIg" eventType="touchUpInside" id="1gp-Mh-Nf2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucQ-rD-QDG">
                                 <rect key="frame" x="129.5" y="103" width="61" height="33"/>
@@ -108,11 +111,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Manage Customer"/>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rlL-YP-VhD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlL-YP-VhD">
+                                <rect key="frame" x="0.0" y="5" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="MENU" id="LAj-ol-TES"/>
+                                    <navigationItem title="MENU" id="LAj-ol-TES">
+                                        <barButtonItem key="rightBarButtonItem" title="Log out" id="YCK-hr-rax">
+                                            <connections>
+                                                <action selector="LogOut:" destination="QnS-Qa-RIg" id="LSg-IJ-Nyp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -121,9 +129,12 @@
                             <constraint firstItem="Yc6-Vt-dFL" firstAttribute="centerX" secondItem="MEs-Aa-bOM" secondAttribute="centerX" id="4dN-ws-Kfu"/>
                             <constraint firstItem="ucQ-rD-QDG" firstAttribute="centerX" secondItem="MEs-Aa-bOM" secondAttribute="centerX" id="Edo-b3-Uhd"/>
                             <constraint firstItem="Yc6-Vt-dFL" firstAttribute="top" secondItem="ucQ-rD-QDG" secondAttribute="bottom" constant="15" id="UEn-wM-u4X"/>
+                            <constraint firstAttribute="trailing" secondItem="rlL-YP-VhD" secondAttribute="trailing" id="ZCi-oh-qdX"/>
                             <constraint firstItem="ucQ-rD-QDG" firstAttribute="top" secondItem="wsk-06-aOm" secondAttribute="bottom" constant="15" id="iG2-fx-zXj"/>
                             <constraint firstItem="wsk-06-aOm" firstAttribute="top" secondItem="UA7-Qm-xED" secondAttribute="bottom" constant="35" id="iMT-xg-A7h"/>
+                            <constraint firstItem="rlL-YP-VhD" firstAttribute="top" secondItem="MEs-Aa-bOM" secondAttribute="top" constant="5" id="kzG-ju-fq7"/>
                             <constraint firstItem="wsk-06-aOm" firstAttribute="centerX" secondItem="MEs-Aa-bOM" secondAttribute="centerX" id="m2E-Hx-SaI"/>
+                            <constraint firstItem="rlL-YP-VhD" firstAttribute="leading" secondItem="MEs-Aa-bOM" secondAttribute="leading" id="xd9-Zl-15j"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -15,6 +15,9 @@
 		FE7391041ECDFD9B00653390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7391021ECDFD9B00653390 /* LaunchScreen.storyboard */; };
 		FE73910C1ECE001800653390 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE73910B1ECE001800653390 /* GoogleService-Info.plist */; };
 		FEA6F51F1ED0BDBE0096B58F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6F51E1ED0BDBE0096B58F /* MainViewController.swift */; };
+		FEB2F58B1ED2916900E11EA1 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2F58A1ED2916900E11EA1 /* UserInfoViewController.swift */; };
+		FEB2F58D1ED2927E00E11EA1 /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEB2F58C1ED2927E00E11EA1 /* UserInfo.storyboard */; };
+		FEB2F5911ED2A33E00E11EA1 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2F5901ED2A33E00E11EA1 /* UserInfo.swift */; };
 		FEDF40701ED1B336000DC2ED /* Storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDF406F1ED1B336000DC2ED /* Storage.storyboard */; };
 		FEDF40741ED1D931000DC2ED /* myava.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEDF40731ED1D931000DC2ED /* myava.jpg */; };
 		FEDF40761ED1DC43000DC2ED /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDF40751ED1DC43000DC2ED /* StorageViewController.swift */; };
@@ -34,6 +37,9 @@
 		FE7391051ECDFD9B00653390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE73910B1ECE001800653390 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEA6F51E1ED0BDBE0096B58F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FEB2F58A1ED2916900E11EA1 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		FEB2F58C1ED2927E00E11EA1 /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
+		FEB2F5901ED2A33E00E11EA1 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		FEDF406F1ED1B336000DC2ED /* Storage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storage.storyboard; sourceTree = "<group>"; };
 		FEDF40731ED1D931000DC2ED /* myava.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = myava.jpg; sourceTree = "<group>"; };
 		FEDF40751ED1DC43000DC2ED /* StorageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 				FE7390FB1ECDFD9900653390 /* ViewController.swift */,
 				FEA6F51E1ED0BDBE0096B58F /* MainViewController.swift */,
 				FEDF40751ED1DC43000DC2ED /* StorageViewController.swift */,
+				FEB2F58A1ED2916900E11EA1 /* UserInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 		FEA6F51B1ED0B7ED0096B58F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FEB2F5901ED2A33E00E11EA1 /* UserInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 				FE7390FD1ECDFD9A00653390 /* Main.storyboard */,
 				FE7391021ECDFD9B00653390 /* LaunchScreen.storyboard */,
 				FEDF406F1ED1B336000DC2ED /* Storage.storyboard */,
+				FEB2F58C1ED2927E00E11EA1 /* UserInfo.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 				FE7391041ECDFD9B00653390 /* LaunchScreen.storyboard in Resources */,
 				FEDF40701ED1B336000DC2ED /* Storage.storyboard in Resources */,
 				FEDF40741ED1D931000DC2ED /* myava.jpg in Resources */,
+				FEB2F58D1ED2927E00E11EA1 /* UserInfo.storyboard in Resources */,
 				FE73910C1ECE001800653390 /* GoogleService-Info.plist in Resources */,
 				FE7391011ECDFD9B00653390 /* Assets.xcassets in Resources */,
 				FE7390FF1ECDFD9A00653390 /* Main.storyboard in Resources */,
@@ -279,7 +289,9 @@
 			files = (
 				FEA6F51F1ED0BDBE0096B58F /* MainViewController.swift in Sources */,
 				FE7390FC1ECDFD9900653390 /* ViewController.swift in Sources */,
+				FEB2F58B1ED2916900E11EA1 /* UserInfoViewController.swift in Sources */,
 				FEDF40761ED1DC43000DC2ED /* StorageViewController.swift in Sources */,
+				FEB2F5911ED2A33E00E11EA1 /* UserInfo.swift in Sources */,
 				FE7390FA1ECDFD9900653390 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

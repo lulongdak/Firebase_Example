@@ -34,6 +34,25 @@ class MainViewController: UIViewController {
         self.present(controller, animated: true, completion: nil)
         
     }
+    @IBAction func View_UserInfo(_ sender: Any) {
+        let storyboar = UIStoryboard(name: "UserInfo", bundle: Bundle.main)
+        let controller = storyboar.instantiateViewController(withIdentifier: "Userinfoboar") as! UserInfoViewController
+        self.present(controller, animated: true, completion: nil)
+    }
+    @IBAction func LogOut(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            print("Sign out")
+            
+        }   catch let signOutError as NSError {
+            print(signOutError)
+        }
+        let storyboar = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let controller = storyboar.instantiateViewController(withIdentifier: "Loginboar") as! ViewController
+        self.present(controller, animated: true, completion: nil)
+
+    }
 
     /*
     // MARK: - Navigation
