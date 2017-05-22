@@ -13,7 +13,7 @@ import Darwin
 
 class StorageViewController: UIViewController {
 
-    @IBOutlet weak var statelbl: UILabel!
+   
     @IBOutlet weak var delBtn: UIButton!
     var stateData = 0
     @IBOutlet weak var imgUI: UIImageView!
@@ -82,7 +82,7 @@ class StorageViewController: UIViewController {
     
    
     @IBAction func Delete_Action(_ sender: Any) {
-        self.statelbl.isHidden = true
+        
         let path = Auth.auth().currentUser!.uid + "/myava.jpg"
         let storageRef = Storage.storage().reference(withPath: path )
         storageRef.delete(completion: { (error) in

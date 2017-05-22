@@ -22,33 +22,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSd-bE-LLN">
-                                <rect key="frame" x="119" y="50" width="82" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Upload file"/>
+                                <rect key="frame" x="116" y="60" width="88" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Upload file">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="Upload_file:" destination="YmK-S4-g3z" eventType="touchUpInside" id="7Rs-JV-qz3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9Q-BA-FQo">
-                                <rect key="frame" x="108" y="98" width="104" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Download file"/>
+                                <rect key="frame" x="104.5" y="108" width="111" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Download file">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="Download_file:" destination="YmK-S4-g3z" eventType="touchUpInside" id="ZaL-Mb-Tw0"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aY-Ck-0M4">
-                                <rect key="frame" x="259.5" y="213" width="45" height="30"/>
-                                <state key="normal" title="Delete"/>
+                                <rect key="frame" x="256.5" y="213" width="48" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="Delete_Action:" destination="YmK-S4-g3z" eventType="touchUpInside" id="V0x-iW-kJA"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yjg-nh-VVQ">
                                 <rect key="frame" x="0.0" y="5" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="STORAGE" id="dxg-sp-32w">
                                         <barButtonItem key="leftBarButtonItem" title="Menu" id="9Bf-0d-sb7">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="BacktoMenu:" destination="YmK-S4-g3z" id="hrA-tD-4aI"/>
                                             </connections>
@@ -64,10 +76,10 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Yjg-nh-VVQ" secondAttribute="trailing" id="55w-rp-OOi"/>
-                            <constraint firstItem="vSd-bE-LLN" firstAttribute="top" secondItem="qdc-Ia-DWC" secondAttribute="bottom" constant="30" id="7MA-Re-e6N"/>
+                            <constraint firstItem="vSd-bE-LLN" firstAttribute="top" secondItem="qdc-Ia-DWC" secondAttribute="bottom" constant="40" id="7MA-Re-e6N"/>
                             <constraint firstAttribute="trailing" secondItem="2aY-Ck-0M4" secondAttribute="trailing" constant="15" id="9ve-4I-T8G"/>
                             <constraint firstItem="e9Q-BA-FQo" firstAttribute="centerX" secondItem="wcN-KO-SaH" secondAttribute="centerX" id="CiL-gp-AlE"/>
                             <constraint firstItem="Yjg-nh-VVQ" firstAttribute="top" secondItem="wcN-KO-SaH" secondAttribute="top" constant="5" id="EZJ-ya-l8T"/>

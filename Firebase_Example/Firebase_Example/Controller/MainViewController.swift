@@ -9,17 +9,30 @@
 import UIKit
 import Firebase
 
+
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var idLabel: UILabel!
-    var id:String? = nil
+    var isLogin = false
     
-    @IBOutlet weak var btnSignOut: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         print("\(Auth.auth().currentUser!.uid)")
+        if (isLogin == true){
+            let rootRef = Database.database().reference()
+            let condition = rootRef.child("user_info")
+            condition.observe( DataEventType.value, with: { (snapshot: DataSnapshot) in
+                let hasChildUid = snapshot.childSnapshot(forPath: Auth.auth().currentUser!.uid).exists()
+                
+                if (hasChildUid == false){
+                    condition.child(Auth.auth().currentUser!.uid).setValue(["name": "","email": Auth.auth().currentUser!.email,"phone":""])
+                }
+                
+            })
+        }
+        
+
         
         
     }
@@ -27,7 +40,13 @@ class MainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
+    
+   /* override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+        
+    }*/
     
     @IBAction func ViewStorage(_ sender: Any) {
         let storyboar = UIStoryboard(name: "Storage", bundle: Bundle.main)
@@ -56,20 +75,7 @@ class MainViewController: UIViewController {
     }
 
     
-    @IBAction func btnSignOutPressed(_ sender: Any) {
-        if Auth.auth().currentUser != nil
-        {
-            do
-            {
-                try Auth.auth().signOut()
-                self.performSegue(withIdentifier: "logOutSuccess", sender: nil)
-            }
-            catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        }
-    }
-    /*
+       /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

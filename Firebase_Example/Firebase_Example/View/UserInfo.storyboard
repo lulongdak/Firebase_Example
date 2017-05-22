@@ -23,9 +23,14 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6l-AX-AAc">
                                 <rect key="frame" x="0.0" y="5" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="USER INFO" id="x1P-RC-0Qn">
                                         <barButtonItem key="leftBarButtonItem" title="Menu" id="nFd-GE-QWA">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="BacktoMenu:" destination="6Kp-8s-zuV" id="PBA-ur-6Xv"/>
                                             </connections>
@@ -91,21 +96,27 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WJ-oU-RRe">
-                                <rect key="frame" x="135" y="271" width="51" height="30"/>
-                                <state key="normal" title="Update"/>
+                                <rect key="frame" x="130.5" y="271" width="60" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="Update_Action:" destination="6Kp-8s-zuV" eventType="touchUpInside" id="Q5H-24-IgT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTu-6e-CJH">
-                                <rect key="frame" x="99" y="316" width="123" height="30"/>
-                                <state key="normal" title="Change password"/>
+                                <rect key="frame" x="87" y="319" width="147" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Change password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="Changepass_Action:" destination="6Kp-8s-zuV" eventType="touchUpInside" id="2oD-6n-ePa"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="AUc-Qt-R7E" firstAttribute="leading" secondItem="j36-HD-88W" secondAttribute="trailing" constant="25" id="00i-YL-rQt"/>
                             <constraint firstItem="BEt-0T-miJ" firstAttribute="top" secondItem="AUc-Qt-R7E" secondAttribute="bottom" constant="16" id="3lO-1f-lci"/>

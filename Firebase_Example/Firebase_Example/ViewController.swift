@@ -11,6 +11,8 @@ import Firebase
 import FirebaseAuth
 import FBSDKLoginKit
 
+
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var txfEmail: UITextField!
@@ -227,12 +229,12 @@ class ViewController: UIViewController {
     }
     
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginSuccess" {
             if let destinationVC = segue.destination as? MainViewController{
-                //destinationVC.id = Auth.auth().currentUser?.uid
+                destinationVC.isLogin = true
                 
             }
         }
-    }*/
+    }
 }
