@@ -29,7 +29,6 @@ class StorageViewController: UIViewController {
     }
     
     @IBAction func Upload_file(_ sender: Any) {
-        self.statelbl.isHidden = true
         let path = Auth.auth().currentUser!.uid + "/myava.jpg"
         let storageRef = Storage.storage().reference(withPath: path )
         let img = UIImage(named: "myava.jpg")
@@ -37,17 +36,14 @@ class StorageViewController: UIViewController {
         metadata.contentType="image/jpeg"
         storageRef.putData(UIImageJPEGRepresentation(img!, 1.0)!, metadata: metadata) { (data,error) in
             if error == nil {
-                self.statelbl.text = "Upload Success"
-                self.statelbl.isHidden=false
                 print("Upload success!")
+                self.ArletNotice(title: "Upload", message: "Upload Success")
                 
             }
             else{
-                
-                self.statelbl.text = "Upload failed"
-                self.statelbl.isHidden=false
                 print(error?.localizedDescription ?? "Error")
                 print("Upload failed!")
+                self.ArletNotice(title: "Upload", message: "Upload Failed")
             }
           
         }
@@ -57,17 +53,16 @@ class StorageViewController: UIViewController {
     }
     
     @IBAction func Download_file(_ sender: Any) {
-        self.statelbl.isHidden = true
+       
         let path = Auth.auth().currentUser!.uid + "/myava.jpg"
         let storageRef = Storage.storage().reference(withPath: path )
-        storageRef.getData(maxSize: 1*1024*1024){ (data,error) in
+        storageRef.getData(maxSize: INT64_MAX){ (data,error) in
             if error == nil {
                 print("Download success")
-                self.statelbl.text = "Download Success"
                 self.imgUI.image = UIImage(data: data!)
                 self.imgUI.isHidden=false
-                self.statelbl.isHidden=false;
                 self.delBtn.isHidden = false;
+                self.ArletNotice(title: "Download", message: "Download Success")
               
                 
             }
@@ -75,9 +70,8 @@ class StorageViewController: UIViewController {
                 self.imgUI.isHidden=true
                 print(error?.localizedDescription ?? "Error")
                 print("Download failed")
-                self.statelbl.text = "Download failed"
-                self.statelbl.isHidden=false;
-               // sleep(5)
+                self.ArletNotice(title: "Download", message: "Download Failed")
+               
             }
            
             
@@ -93,14 +87,13 @@ class StorageViewController: UIViewController {
         let storageRef = Storage.storage().reference(withPath: path )
         storageRef.delete(completion: { (error) in
             if error == nil {
-                self.statelbl.text = "Delete success"
+                self.ArletNotice(title: "Delete", message: "Delete Success")
                 print("Delete success")
             }
             else {
-                self.statelbl.text = "Delete failed"
                 print("Delete failed")
+                self.ArletNotice(title: "Delete", message: "Delete Failed")
             }
-            self.statelbl.isHidden = false
         })
 
     }
@@ -126,6 +119,13 @@ class StorageViewController: UIViewController {
         
     }
 
+    func ArletNotice(title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

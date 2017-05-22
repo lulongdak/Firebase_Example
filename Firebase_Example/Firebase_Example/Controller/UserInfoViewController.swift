@@ -34,9 +34,9 @@ class UserInfoViewController: UIViewController {
         super.viewDidAppear(animated)
         let condition = rootRef.child("user_info").child(Auth.auth().currentUser!.uid)
         condition.observe( DataEventType.value, with: { (snapshot: DataSnapshot) in
-            //print(snapshot)
+           
             if let user = snapshot.value as? [String: AnyObject]{
-                var info = UserInfo()
+                let info = UserInfo()
                 info.setValuesForKeys(user)
                 self.textname.text = info.name
                 self.textemail.text = info.email
